@@ -47,6 +47,9 @@ c
   !isBeginer -> return false
 
 
+--------------------------------------------------
+
+
   CONTROLFLOW
   if (condition) {
     do something
@@ -97,16 +100,48 @@ c
   continue -> skip this current iteration
 
 
+
+  ---------------------------------------
+
+  FUNCTION/METHOD
+
+  We just lookid at some cool blocks of code that gets things done!
+  You can organize these blocks of code into functions so that we can
+  reuse them easily. 
+
+  'void' means that the function returns nothing. Shortly we will look
+  at functions that do return something. This one for now just executes
+  the code in the function.
+
+
+
+
+
   */
+
+  //basic function
+
+  void greet() {
+    print('Hello Alex');
+  }
+
+  //function with parameters
+
+  void greetPerson(String name, int age) {
+    print("Hello " + name);
+  }
+
+  //function with return type
+
+  int add(int a, int b) {
+    int sum = a + b;
+    return sum;
+  }
 
   @override
   Widget build(BuildContext context) {
-    int countDown = 5;
-
-    while (countDown > 0) {
-      print(countDown);
-      countDown--;
-    }
+    int mySum = add(3, 5);
+    print(mySum);
 
     return const MaterialApp(
         debugShowCheckedModeBanner: false, home: Scaffold());
